@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Про нас — Ваш Бренд</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/"><img src="/assets/logo.svg" alt="Логотип"/> <span>Ваш Бренд</span></a>
+    <nav id="nav" class="nav">
+      <a href="/index.html#services">Послуги</a>
+      <a href="/index.html#about">Про проєкт</a>
+      <a href="/index.html#contact">Контакти</a>
+    </nav>
+    <button class="nav-toggle" aria-controls="nav" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Про нас</h1>
+      <p>Тут опишіть свою компанію/проєкт: чим займаєтесь, які цінності та переваги. Додайте фото команди, відгуки або досягнення.</p>
+      <div class="grid two">
+        <div class="card">
+          <h3>Місія</h3>
+          <p>Коротко сформулюйте місію й цілі.</p>
+        </div>
+        <div class="card">
+          <h3>Переваги</h3>
+          <ul class="list">
+            <li>Професіоналізм</li>
+            <li>Надійність</li>
+            <li>Клієнтоорієнтованість</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ваш Бренд.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,17 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ваш Бренд — Сучасний сайт на Azure Static Web Apps</title>
+  <meta name="description" content="Легка стартова сторінка без фреймворків: HTML, CSS, JS. Розгорнуто на Azure Static Web Apps." />
+  <meta name="theme-color" content="#0b57d0" />
+  <link rel="preload" href="/assets/logo.svg" as="image" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
+  <meta property="og:title" content="Ваш Бренд" />
+  <meta property="og:description" content="Сучасний лендінг на Azure Static Web Apps" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Ваш+Бренд" />
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+  <header class="site-header">
+    <a class="logo" href="/"><img src="/assets/logo.svg" alt="Логотип"/> <span>Ваш Бренд</span></a>
+    <nav id="nav" class="nav">
+      <a href="#services">Послуги</a>
+      <a href="#about">Про нас</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <button class="nav-toggle" aria-controls="nav" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Сайт запущено на <span class="accent">Azure Static Web Apps</span></h1>
+        <p>Чистий HTML/CSS/JS без збірки. Швидке завантаження, глобальний CDN, автоматичний CI/CD з GitHub.</p>
+        <div class="cta">
+          <a class="btn primary" href="#services">Наші можливості</a>
+          <a class="btn" href="/about.html">Дізнатися більше</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Що вже налаштовано</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>Готовий деплой</h3>
+          <p>Зміни у GitHub → автоматичне оновлення сайту за 1–2 хвилини.</p>
+        </article>
+        <article class="card">
+          <h3>Глобальна доставка</h3>
+          <p>Контент розподіляється через CDN для швидкого доступу по всьому світу.</p>
+        </article>
+        <article class="card">
+          <h3>Простота</h3>
+          <p>Жодних фреймворків: лише <strong>index.html</strong>, <strong>style.css</strong>, <strong>script.js</strong>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="two-col">
+        <div>
+          <h2>Про проєкт</h2>
+          <p>Цей шаблон створено спеціально для Azure Static Web Apps без збірки. Можна безпечно додавати сторінки, зображення та стилі — усе розгортається автоматично.</p>
+          <ul class="list">
+            <li>Маршрути працюють «як є» (наприклад, <code>/about.html</code>).</li>
+            <li>Додатково можна підключити <em>API</em> на Azure Functions.</li>
+            <li>Кастомні домени, SSL, захист та ін. — у кілька кліків.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="feature-box">
+            <h3>Швидкий старт редагування</h3>
+            <ol>
+              <li>Відкрий <code>index.html</code> та зміни тексти/розділи.</li>
+              <li>Онови стилі у <code>style.css</code>.</li>
+              <li>Зроби commit → деплой автоматично запуститься.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Контакти</h2>
+      <p>Напишіть нам на <a href="mailto:info@example.com">info@example.com</a> або телефонуйте <a href="tel:+380000000000">+380 (00) 000‑00‑00</a>.</p>
+      <p class="muted">(Змініть ці дані у файлі <code>index.html</code>.)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ваш Бренд. Усі права захищено.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
 </html>
